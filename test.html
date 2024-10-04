@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuit Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Component Selection Panel -->
+        <div class="component-panel">
+            <h3>Select Components</h3>
+            <div class="component" draggable="true" data-type="battery">Battery</div>
+            <div class="component" draggable="true" data-type="switch">Switch</div>
+            <div class="component" draggable="true" data-type="resistor">Resistor</div>
+            <div class="component" draggable="true" data-type="lamp">Lamp</div>
+        </div>
+
+        <!-- Simulation Area -->
+        <div class="simulation-area" id="simulationArea">
+            <h3>Simulation Area</h3>
+        </div>
+
+        <!-- User Input and Calculation Area -->
+        <div class="calculation-area">
+            <h3>Calculate Current, Voltage, and Power</h3>
+            <label for="amperes">Amperes (A):</label>
+            <input type="number" id="amperes">
+            <label for="volts">Volts (V):</label>
+            <input type="number" id="volts">
+            <label for="watts">Watts (W):</label>
+            <input type="number" id="watts">
+            <button id="checkCalculation">Check Calculation</button>
+            <div id="calculationResult"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
