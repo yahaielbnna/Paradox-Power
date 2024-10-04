@@ -31,7 +31,8 @@ window.onscroll = e => {
     logo.dataset.y = calcu * 60;
     logo.dataset.scale = 1 + ((scrollY / innerHeight) / 2);
 
-    if ((document.documentElement.scrollTop + window.innerHeight) == document.documentElement.offsetHeight) {
+    // if ((document.documentElement.scrollTop + window.innerHeight) == document.documentElement.offsetHeight) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
         btn.style.opacity = '1';
         btn.style.visibility = 'visible';
     } else {

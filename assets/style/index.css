@@ -99,7 +99,7 @@ main .Logo{
     background: #ffffff27;
     border: 2px solid #fff;
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     cursor: pointer;
     transition: 0.3s;
     visibility: hidden;
@@ -112,7 +112,7 @@ main .Logo{
 
 .message{
     position: fixed;
-    font-size: 2rem;
+    font-size: 1.3rem;
     color: #fff;
     top: 50%;
     left: 50%;
@@ -123,16 +123,18 @@ main .Logo{
     backdrop-filter: blur(10px);
     opacity: 0;
     transform: translateX(-50%) translateY(100px);
+    visibility: hidden;
     padding: 30px;
     border-radius: 15px;
     text-align: center;
 }
 .paragraph{
-    font-size: 1.3rem;
+    font-size: 1rem;
     /* top: calc(5% + 70px); */
     margin-top: 10px;
 }
 .message.show{
+    visibility: visible;
     opacity: 1;
     transform: translateX(-50%) translateY(-50%);
 }
@@ -150,7 +152,7 @@ main .Logo{
     border-radius: 20px; */
     cursor: pointer;
     color: inherit;
-    text-decoration: no;
+    text-decoration: none;
 }
 .cards .card img{
     width: 100%;
@@ -174,7 +176,7 @@ main .Logo{
     transition: 0.5s;
 }
 .cards .card p{
-    font-size: 1.2rem;
+    font-size: 1rem;
     transform: translateY(-70px);
     opacity: 0;
     transition: 0.5s;
