@@ -104,10 +104,3 @@ btn.addEventListener('click', e => {
     paragraph.classList.add('show')
     message.classList.add('show')
 })
-let beat = new Audio('../../sound/Cosmic Alignment.mp3');
-beat.play();
-beat.volume = 0.01;
-beat.addEventListener('ended', function () {
-    this.currentTime = 0;
-    this.play();
-}, false);

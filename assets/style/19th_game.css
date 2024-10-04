@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+    background: url("../../image/19th_game_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial;
+}
+main {
+  position: fixed;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  width: 60%;
+  transition: 2.3s;
+  background: #10170c90;
+  backdrop-filter: blur(15px);
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #30342f;
+  animation: apear 1.8s ease-in-out 0.5s;
+  animation-fill-mode: forwards;
+  max-height: 90vh;
+}
+.row{
+    min-height: 60vh;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.icons{
+    width: 25%;
+    overflow: hidden;
+}
+.icons ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.icons li{
+    list-style: none;
+    overflow: hidden;
+    transition: 0.3s;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.icons li:hover{
+    background: #10170c64;
+}
+.icons li img{
+    width: 100%;
+    filter: invert(1);
+}
+.icons li p{
+    text-align: center;
+    transform: translateY(-20px);
+}
+@keyframes apear {
+    0% {
+        /* transform: translateX(-50%) translateY(100px); */
+        opacity: 0;
+    }
+    100% {
+        /* transform: translateX(-50%) translateY(-50%); */
+        opacity: 1;
+    }
+}
+.viewArea{
+    width: 75%;
+    background: #10170c64;
+    border-radius: 10px;
+    border: 2px solid #30342f;
+}
+.btn{
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.btn:hover{
+    /* background: #30342f;
+    border: 2px solid #30342f; */
+    background: #ffffffe2;
+    color: #30342f;
+}
+
+.feilds{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0 0;
+}
+.feilds input{
+    padding: 10px;
+    background: transparent;
+    border: 2px solid #30342f;
+    color: #fff;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.feilds button{
+    padding: 10px 20px;
+    background: #ffffff16;
+    border: 2px solid #30342f;
+    color: #ffffffb9;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.feilds button:hover{
+    background: #10170c64;
+}
