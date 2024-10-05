@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial;
+}
+
+
+main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 2s;
+}
+main.show{
+    opacity: 1;
+}
+.person{
+    position: absolute;
+    /* top: 100%;
+    left: 100%;
+    transform: translate(-100%,-100%); */
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    height: 80%;
+}
+.person img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    transition: 0.3s;
+}
+.person img.appear{
+    opacity: 1;
+}
+main::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, #000,#00000000);
+    z-index: -1;
+}
+main .talk{
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    padding: 50px;
+    font-size: 1.5rem;
+}
+main .choose{
+    margin: 20px 0 0;
+    opacity: 0;
+    transition: 1s;
+    z-index: 5;
+}
+main .choose button{
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    color: #fff;
+    background: none;
+    font-size: 1.1rem;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+main .choose button:hover{
+    background: #fff;
+    color: #000;
+}
+main .choose.show{
+    opacity: 1;
+}
+
+.background-Container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.background-Container img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    opacity: 0;
+    transition: 2s;
+}
+.background-Container img.appear{
+    opacity: 1;
+}
+
+.message{
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0e0e0ec1;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20%;
+    text-align: center;
+    line-height: 4rem;
+    animation: hideMessage 2s ease-in 5s forwards;
+}
+.message h1{
+    transform: translateY(100px);
+    opacity: 0;
+    animation: textApear 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes textApear {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes hideMessage {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}

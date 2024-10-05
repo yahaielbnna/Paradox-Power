@@ -24,6 +24,7 @@ main {
   padding: 30px;
   border-radius: 15px;
   border: 2px solid #30342f;
+  /* animation: apear 1.8s ease-in-out 0.5s; */
   animation: apear 1.8s ease-in-out 0.5s;
   animation-fill-mode: forwards;
   max-height: 90vh;
