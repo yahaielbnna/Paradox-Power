@@ -140,9 +140,19 @@ function present(i) {
                 btn.dataset.message = element.message;
                 btn.dataset.next = element.next;
                 btn.addEventListener('click', e => {
-                    rate += +(e.currentTarget.dataset.rate);
-                    present(e.currentTarget.dataset.next)
-                    console.log(rate);
+                    let el = e.currentTarget.dataset;
+                    rate += +(el.rate);
+                    if (el.next == i) {
+                        main.classList.remove('show');
+                        document.querySelector('[data-bg].appear').classList.remove('appear');
+                        if (rate >= 0) {
+                            document.querySelector('[data-bg="good"]').classList.add('appear');
+                        } else {
+                            document.querySelector('[data-bg="bad"]').classList.add('appear');
+                        }
+                    } else {
+                        present(el.next)
+                    }
                 })
                 choose.appendChild(btn);
             });

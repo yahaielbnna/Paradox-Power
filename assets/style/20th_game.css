@@ -39,7 +39,7 @@ main.show{
     right: 0;
     width: 100%;
     opacity: 0;
-    transition: 0.3s;
+    transition: 2s;
 }
 .person img.appear{
     opacity: 1;
